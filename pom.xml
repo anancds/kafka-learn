@@ -9,11 +9,13 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>parrot-datacollector-common</module>
+    <module>parrot-common</module>
   </modules>
 
   <properties>
     <compileSource>1.8</compileSource>
+    <guava.version>21.0</guava.version>
+    <fastjson.version>1.2.24</fastjson.version>
   </properties>
 
   <build>
@@ -32,5 +34,21 @@
       </plugin>
     </plugins>
   </build>
+
+  <dependencyManagement>
+    <dependencies>
+      <!--guava-->
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastjson.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
 </project>
